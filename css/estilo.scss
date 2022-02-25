@@ -1,0 +1,244 @@
+/*variables*/
+$color_dark_blue: rgb(4, 4, 88);
+$color_green:green;
+$color_light_green:lightgreen;
+$color_white: white;
+$color_dark_green: darkgreen;
+$color_black: black;
+
+/* Cabecera y menú */
+.nav{
+    background-color: $color_dark_blue;
+    border-radius: 0%;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px; 
+    
+}
+.nav-tabs{
+    margin:0;
+    padding:0;
+    border-bottom: 0;
+}
+
+.navbar-light{
+    font-size: 20px; 
+    color: $color_green;
+    .navbar-nav {
+        .nav-link{
+            font-size: 20px; 
+            color: $color_green;
+            &:hover{
+                color: $color_dark_blue;
+            }
+        } 
+    }
+    .navbar-brand{
+        color:$color_light_green;
+        font-size: 20px; 
+        font-weight:700;  
+    }
+}
+
+.nav-item{
+    border-radius: 0%;
+}
+
+.nav-link{
+    color: $color_light_green;
+    &:hover {
+        text-decoration: none;
+    color:white;
+    }
+}
+
+.font-weight-bold{
+    color: $color_light_green
+}
+
+.dropdown-menu{
+    background-color: $color_dark_blue;
+    
+}
+.dropdown-item{
+    color: white;
+}
+
+/* Parallax */
+.parallax {
+    background-image: url("../img/perifericos_comunicaciones_electricos.jpg");
+    height: 80vh;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;          
+    padding-left: 3vw;
+    padding-top: 20vw;
+    margin:0;
+    h4{
+        font-size: 3rem; 
+        text-align: left; 
+        color:$color_white;
+    }
+    p{
+        font-size: 2rem; 
+        text-align: left; 
+        color:$color_white; 
+    }
+}
+
+/* Contenedor bootstrap y Jumbotron */
+.container-fluid{
+    padding:0;
+}
+.jumbotron {
+    background-color: $color_dark_blue;
+    color:white;
+    font-size: 1.2rem; 
+    margin: 0;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 0%;
+    padding:0;
+    padding-top: 0.5rem;
+    h1 {
+        color:$color_light_green;
+    }
+    p {
+        margin-bottom: 0;
+    }
+  }
+  
+
+/* Tarjetas en contenedor */
+  .flexContainer{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    background-color: $color_dark_blue;
+    gap:1%;
+}
+.card-body{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    color: $color_dark_green;
+}
+.card{
+    border: 3px solid $color_dark_blue;
+    margin-bottom:10px;
+    padding-top: 20px; 
+    &:hover{
+        transform: scale(1.03);
+        transition: all 0.7s;
+        border-color: $color_green;
+    }
+}
+
+.btn{
+    background-color: $color_dark_blue;
+    color:white
+}
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: contain;
+}
+
+/* Formulario y mapa */
+
+.formulario{
+    color:white;
+    background-color: $color_dark_blue;
+    padding-top:5%;
+    padding-bottom:5%;
+    padding-left:20%;
+    padding-right:20%;
+    
+}
+
+.titulo_personal {
+    text-align: center;
+    color: $color_light_green;
+}
+
+.mapa_oficina{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    background-color: $color_dark_blue;
+}
+
+
+/* Footer */
+.page-footer{
+    background-color: $color_black;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+/* medias queries */
+
+/* vista desktop */
+@media only screen and (min-width: 1024px){
+    .parallax{
+        height: 80vh;
+        width: 100%;
+        padding-left: 3vw;
+        padding-top: 20vh;
+        h4 {
+            font-size: 3rem;  
+        }
+        p {
+            font-size: 2rem;   
+        }
+    }
+}
+
+/* vista tablet */
+@media only screen and (min-width: 768px) and (max-width:1023px){
+    .parallax{
+        height: 80vh;
+        width: 100%;
+        padding-left: 3vw;
+        padding-top: 20vh;
+        h4 {
+            font-size: 2.5rem;   
+        }
+        p{
+            font-size: 1.8rem;   
+        }
+    }
+}
+
+/* vista mobile */
+@media only screen and (max-width: 767px){
+    .parallax{
+        height: 90vh;
+        width: 100%;
+        padding-left: 3vw;
+        padding-top: 30vh;
+        h4 {
+            font-size: 2rem; 
+        }
+        p {
+            font-size: 1.5rem;  
+        }
+    }
+    
+    .flexContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
